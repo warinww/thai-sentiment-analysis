@@ -10,7 +10,6 @@ Original file is located at
 # =============================================================================================
 # 0) Install + Imports
 # =============================================================================================
-!pip -q install pythainlp scikit-learn
 
 import json
 import numpy as np
@@ -31,18 +30,8 @@ print("TF:", tf.__version__)
 # =============================================================================================
 # 1) Upload cleaned JSON
 # =============================================================================================
-# from google.colab import files
-# uploaded = files.upload()
 
-# json_path = list(uploaded.keys())[0]
-# print("Loaded:", json_path)
-
-from google.colab import drive
-drive.mount('/content/drive')
-# json_path = "/content/drive/MyDrive/cleaned_train_sentiment.json"
-json_path = "/content/drive/MyDrive/train_sentiment.cleaned.json"
-
-with open(json_path, "r", encoding="utf-8") as f:
+with open("train_sentiment.cleaned.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 texts = data["text"]
