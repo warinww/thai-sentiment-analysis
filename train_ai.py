@@ -3,6 +3,8 @@
 # 0) Install + Imports
 # =============================================================================================
 
+!pip -q install pythainlp scikit-learn
+
 import json
 import numpy as np
 import pandas as pd
