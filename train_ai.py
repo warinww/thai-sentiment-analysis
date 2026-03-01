@@ -84,24 +84,6 @@ X_val, X_test, y_val, y_test = train_test_split(
 print("train:", len(X_train), "val:", len(X_val), "test:", len(X_test))
 
 
-
-# ===============================================================================================================
-# 4) Split 70/15/15 (stratified)
-# ===============================================================================================================
-X = df["text_tok"].values
-y = df["y"].values
-
-X_train, X_temp, y_train, y_temp = train_test_split(
-    X, y, test_size=0.30, random_state=42, stratify=y
-)
-
-X_val, X_test, y_val, y_test = train_test_split(
-    X_temp, y_temp, test_size=0.50, random_state=42, stratify=y_temp
-)
-
-print("train:", len(X_train), "val:", len(X_val), "test:", len(X_test))
-
-
 # ---------------------------------------------------------------------------------------------------------------------------------------
 
 # ============================================================
